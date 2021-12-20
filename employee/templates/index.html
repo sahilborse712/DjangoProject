@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="add">
+    {% csrf_token %}
+
+    <label>Name: </label>
+    <div>{{ form.ename  }}</div>
+    <label>Email: </label>
+    <div>{{ form.eemail }}</div>
+    <label>Contact: </label>
+    <div>{{ form.econtact }}</div>
+    <label>Designation: </label>
+    <div>{{ form.edesignation }}</div>
+    <div>
+    </br>
+        <button style="background-color:rgb(19, 211, 147); border-color:rgb(13, 216, 13); color:white" type="submit">Add</button>
+    </div>
+  
+
+</form>
+
+{% endblock %}
